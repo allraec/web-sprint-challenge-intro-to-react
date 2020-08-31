@@ -28,7 +28,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Star Wars Characters</h1>
+      <h1 className="Header">Star Wars Characters Traits</h1>
       {characters.map((characters, id) => (
         <Character key={id} character={characters} />
       ))}
