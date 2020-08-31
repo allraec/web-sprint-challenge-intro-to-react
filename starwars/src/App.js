@@ -15,8 +15,9 @@ const App = () => {
 
 
   useEffect(() => {
-    axios.get('https://swapi.dev/api/people/')
+    axios.get('https://swapi.py4e.com/api/people/')
       .then(res => {
+        console.log(res.data.results)
         setCharacters(res.data.results)
       })
       .catch(error => {
@@ -27,7 +28,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header">Star Wars Characters</h1>
       {characters.map((characters, id) => (
         <Character key={id} character={characters} />
       ))}
